@@ -2,6 +2,20 @@
 
 Planejador para dividir um grupo de pessoas entre os veículos disponíveis: quem vai em qual carro, moto ou ônibus, quem dirige e quantas viagens cada veículo precisa fazer.
 
+Teste em **https://quem-vai-de-que.vercel.app/**
+
+![Preencher veículos distribui todo mundo automaticamente, com uma segunda viagem para quem não coube](docs/preencher-veiculos.gif)
+
+## Como usar
+
+No computador: adicionar as pessoas, renomear o carro, criar uma moto, marcar quem dirige e preencher os veículos.
+
+![Fluxo completo no computador](docs/como-usar-computador.gif)
+
+No celular, tocar num nome abre um menu com os destinos e os lugares livres em cada um:
+
+<img src="docs/como-usar-celular.gif" alt="Tocar num nome e escolher o veículo no celular" width="300">
+
 ## O que dá para fazer
 
 - **Adicionar pessoas** de uma vez, separadas por vírgula. Quem tem que ir junto vai com `+` (`Fulano + Ciclano, Beltrano`).
@@ -51,4 +65,5 @@ src/
     ui/            peças reutilizáveis (avisos, botões, estilos, ícone de volante)
     veiculo/       diálogo de novo veículo e de edição
     quadro/        origem, painéis dos veículos, nomes, grupos e menu da pessoa
+docs/              GIFs de demonstração usados neste README
 ```
