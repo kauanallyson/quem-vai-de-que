@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+	--font-sans: "Overpass", ui-sans-serif, system-ui, sans-serif;
+
+	--color-ceu: #eaf1f5;
+	--color-tinta: #1e2328;
+	--color-asfalto: #2b3036;
+	--color-faixa: #f2b705;
+	--color-fusca: #2f6fb3;
+	--color-moto: #c2362b;
+	--color-onibus: #24734f;
+	--color-cromo: #9aa4ad;
+
+	--animate-entrar: entrar 180ms ease-out;
+
+	@keyframes entrar {
+		from {
+			opacity: 0;
+			transform: translateY(4px);
+		}
+	}
+}
+
+/* altura da estrada fixa no pé da tela; o conteúdo e o aviso de desfazer se afastam dela */
+:root {
+	--altura-estrada: 2.5rem;
+}
+
+@media (width >= 40rem) {
+	:root {
+		--altura-estrada: 3.5rem;
+	}
+}
+
+/* na animação do preenchimento só os cards se movem; o resto da página fica parado */
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation: none;
+}
+
+::view-transition-group(*) {
+	animation-duration: 450ms;
+	animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
